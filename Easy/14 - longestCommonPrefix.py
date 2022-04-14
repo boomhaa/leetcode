@@ -1,48 +1,22 @@
+#link to the problem - https://leetcode.com/problems/logngest-common-prefix/g
+
 class Solution(object):
-    def romanToInt(self, s):
-        i=0
-        count=0
-        while i<len(s):
-            if s[i]=="I":
-                if i<len(s)-1 and s[i+1]=="V":
-                    count+=4
-                    i+=2
-                elif i<len(s)-1 and s[i+1]=="X":
-                    count+=9
-                    i+=2
-                else:
+    def longestCommonPrefix(self, strs):
+        min_len=1000000000
+        for i in range(len(strs)):
+            if len(strs[i])<min_len:
+                min_len=len(strs[i])
+        stringer=""
+
+        for i in range(min_len):
+            count=0
+            for j in range(1,len(strs)):
+                if strs[0][i]==strs[j][i]:
                     count+=1
-                    i+=1
-            elif s[i]=='V':
-                count+=5
-                i+=1
-            elif s[i]=="X":
-                if i<len(s)-1 and s[i+1]=="L":
-                    count+=40
-                    i+=2
-                elif i<len(s)-1 and s[i+1]=="C":
-                    count+=90
-                    i+=2
-                else:
-                    count+=10
-                    i+=1
-            elif s[i] == 'L':
-                count += 50
-                i += 1
-            elif s[i]=="C":
-                if i<len(s)-1 and s[i+1]=="D":
-                    count+=400
-                    i+=2
-                elif i<len(s)-1 and s[i+1]=="M":
-                    count+=900
-                    i+=2
-                else:
-                    count+=100
-                    i+=1
-            elif s[i] == 'D':
-                count += 500
-                i += 1
-            elif s[i] == 'M':
-                count += 1000
-                i += 1
-        return count
+            if count==len(strs)-1:
+                stringer+=strs[0][i]
+            else:
+                break
+        if len(stringer)==0:
+            return ""
+        return stringer
