@@ -11,8 +11,8 @@ class ListNode(object):
         self.next = next
 class Solution:
     def getDecimalValue(self, head: ListNode) -> int:
-        num = head.val
+        answer = head.val
         while head.next:
-            num = num * 2 + head.next.val
+            answer = answer * 2 + head.next.val
             head = head.next
-        return num
+        return answer

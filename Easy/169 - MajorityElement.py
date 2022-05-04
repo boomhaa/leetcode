@@ -7,14 +7,14 @@
 
 class Solution(object):
     def majorityElement(self, nums):
-        hesh = {}
+        heshtable = {}
         for i in nums:
-            if i in hesh:
-                hesh[i] += 1
+            if i in heshtable:
+                heshtable[i] += 1
             else:
-                hesh[i] = 1
-        for i in hesh:
-            if hesh[i] > len(nums) // 2:
+                heshtable[i] = 1
+        for i in heshtable:
+            if heshtable[i] > len(nums) // 2:
                 return i
 print(Solution().majorityElement([3,2,3]))
 

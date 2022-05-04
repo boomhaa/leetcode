@@ -15,7 +15,7 @@ class Solution(object):
                  'color':1,
                  'name':2}
         index=indexes[ruleKey]
-        count=0
+        cnt=0
         for i in range(len(items)):
             if ruleValue==items[i][index]:
                 count+=1

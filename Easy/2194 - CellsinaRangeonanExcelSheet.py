@@ -12,8 +12,8 @@
 class Solution(object):
     def cellsInRange(self, s):
         new_list=[]
-        s=s.split(':')
-        for i in range(ord(s[0][0]),ord(s[1][0])+1):
-            for j in range(int(s[0][1]),int(s[1][1])+1):
+        new_string=s.split(':')
+        for i in range(ord(new_string[0][0]),ord(new_string[1][0])+1):
+            for j in range(int(new_string[0][1]),int(new_string[1][1])+1):
                 new_list.append(chr(i)+str(j))
         return new_list

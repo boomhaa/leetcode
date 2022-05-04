@@ -7,7 +7,7 @@
 
 class Solution(object):
     def maximumWealth(self, accounts):
-        new_list=[]
+        result=[]
         for i in range(len(accounts)):
-            new_list.append(sum(accounts[i]))
-        return max(new_list)
+            result.append(sum(accounts[i]))
+        return max(result)

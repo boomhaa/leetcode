@@ -9,8 +9,8 @@ class Solution(object):
     def countConsistentStrings(self, allowed, words):
         not_in_allowed=0
         for word in words:
-            for elem in word:
-                if elem not in allowed:
+            for element in word:
+                if element not in allowed:
                     not_in_allowed+=1
                     break
         return len(words)-not_in_allowed

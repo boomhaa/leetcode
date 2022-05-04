@@ -8,13 +8,13 @@
 
 class Solution(object):
     def kidsWithCandies(self, candies, extraCandies):
-        new_list=[]
+        answer=[]
         for i in range(len(candies)):
             candies_of_kid=candies[i]
             candies[i]+=extraCandies
             if max(candies)==candies_of_kid+extraCandies:
-                new_list.append(True)
+                answer.append(True)
             else:
-                new_list.append(False)
+                answer.append(False)
             candies[i]-=extraCandies
-        return new_list
+        return answer

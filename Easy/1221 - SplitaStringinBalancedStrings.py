@@ -10,7 +10,7 @@ class Solution(object):
     def balancedStringSplit(self, s):
         left_char=0
         right_char=0
-        result=0
+        answer=0
         if len(s)==1:
             return 0
         else:
@@ -20,5 +20,5 @@ class Solution(object):
                 else:
                     right_char+=1
                 if left_char==right_char:
-                    result+=1
-            return result
+                    answer+=1
+            return answer
