@@ -5,10 +5,10 @@
 # '*' Matches zero or more of the preceding element.
 # The matching should cover the entire input string (not partial).
 
-# link to submission - https://leetcode.com/submissions/detail/691070911/
+# link to submission - https://leetcode.com/submissions/detail/694319621/
 
 class Solution(object):
-    def isMatch(s: str, p: str) -> bool:
+    def isMatch(self,s,p):
         rows, columns = (len(s), len(p))
         # Base conditions
         if rows == 0 and columns == 0:

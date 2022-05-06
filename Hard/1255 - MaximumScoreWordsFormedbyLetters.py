@@ -6,6 +6,8 @@
 
 # link to submission - https://leetcode.com/submissions/detail/691070911/
 
+from collections import Counter
+
 class Solution:
   def maxScoreWords(self, words: list[str], letters: list[chr], score: list[int]) -> int:
     count = Counter(letters)
